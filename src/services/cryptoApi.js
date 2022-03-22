@@ -20,6 +20,6 @@ export const cryptoApi = createApi({
     }),
   }),
 });
-// console.log(cryptoApi);
+console.log(cryptoApi);
 
 export const { useGetCryptosQuery } = cryptoApi;
