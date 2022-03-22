@@ -2,13 +2,13 @@ import { Space, Typography } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const CustomFooter = () => {
   return (
     // <footer className="footer">
     <footer className="">
       <Typography.Title
         level={5}
-        style={{ color: "white", textAlign: "center" }}
+        style={{ color: "black", textAlign: "center" }}
       >
         CryptoApp <br />
         All rights reserved
@@ -23,4 +23,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default CustomFooter;

@@ -12,9 +12,9 @@ import {
 // import icon from "../image/bitcoin-digital-webp.png";
 const Navbar = () => {
   return (
-    <div className="nav-container">
+    <div className="">
       <div className="logo-container">
-        <Avatar icon={<CodeSandboxOutlined />} size={64} />
+        <Avatar icon={<CodeSandboxOutlined />} size={40} />
         <Typography.Title level={4} className="logo">
           <Link to="/">CryptoApp</Link>
         </Typography.Title>

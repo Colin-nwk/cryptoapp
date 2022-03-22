@@ -1,8 +1,8 @@
 import React from "react";
+import { Layout } from "antd";
+
 import { Routes, Route, Link } from "react-router-dom";
-// import { Layout, Typography, Space } from "antd";
-// import Home from "./pages/Home";
-// import Navbar from "./components/Navbar";
+
 import {
   Home,
   Exchanges,
@@ -10,20 +10,45 @@ import {
   CryptoCurrencies,
   CryptoDetails,
 } from "./pages/index";
-import { Navbar, Footer } from "./components/index";
-import { Layout } from "antd";
-// import { Navbar } from "./components";
+import { Navbar, CustomFooter } from "./components/index";
+
+const { Header, Content, Footer, Sider } = Layout;
 
 function App() {
   return (
     <>
-      <div className="app">
-        <div className="navbar">
+      <Layout>
+        <Sider
+          breakpoint="lg"
+          collapsedWidth="0"
+          // onBreakpoint={(broken) => {
+          //   console.log(broken);
+          // }}
+          // onCollapse={(collapsed, type) => {
+          //   console.log(collapsed, type);
+          // }}
+          style={{
+            // overflow: "auto",
+            height: "100vh",
+            // position: "fixed",
+            // left: 0,
+            // top: 0,
+            // bottom: 0,
+          }}
+        >
           <Navbar />
-        </div>
-        <main>
-          <Layout>
-            <div className="routes">
+        </Sider>
+        <Layout>
+          <Header
+            className="site-layout-sub-header-background"
+            style={{ padding: 0 }}
+          />
+          <Content style={{ margin: "24px 16px 0" }}>
+            <div
+              className="site-layout-background"
+              style={{ padding: 24, minHeight: 360 }}
+            >
+              {/* Routes */}
               <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route
@@ -38,11 +63,12 @@ function App() {
                 <Route path="/news" element={<News />}></Route>
               </Routes>
             </div>
-          </Layout>
-          <Footer />
-        </main>
-        {/* <small>App</small> */}
-      </div>
+          </Content>
+          <Footer style={{ textAlign: "center" }}>
+            <CustomFooter />
+          </Footer>
+        </Layout>
+      </Layout>
     </>
   );
 }
