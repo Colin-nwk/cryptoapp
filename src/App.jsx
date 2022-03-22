@@ -17,7 +17,7 @@ const { Header, Content, Footer, Sider } = Layout;
 function App() {
   return (
     <>
-      <Layout>
+      <Layout hasSider>
         <Sider
           breakpoint="lg"
           collapsedWidth="0"
@@ -28,22 +28,22 @@ function App() {
           //   console.log(collapsed, type);
           // }}
           style={{
-            // overflow: "auto",
+            overflow: "auto",
             height: "100vh",
-            // position: "fixed",
-            // left: 0,
-            // top: 0,
-            // bottom: 0,
+            position: "fixed",
+            left: 0,
+            top: 0,
+            bottom: 0,
           }}
         >
           <Navbar />
         </Sider>
-        <Layout>
+        <Layout style={{ marginLeft: "200px" }}>
           <Header
             className="site-layout-sub-header-background"
             style={{ padding: 0 }}
           />
-          <Content style={{ margin: "24px 16px 0" }}>
+          <Content style={{ margin: "24px 16px 0", overflow: "initial" }}>
             <div
               className="site-layout-background"
               style={{ padding: 24, minHeight: 360 }}
